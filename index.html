@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Food Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+    <h1>🍔 Smart Food Explorer</h1>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search food..." onkeypress="handleEnter(event)"autocomplete="off">
+        <button onclick="searchFood()">Search</button>
+        <button onclick="toggleDarkMode()">🌙</button>
+    </div>
+    <div class="controls">
+    <select id="filter" onchange="applyFilterSort()">
+        <option value="all">All</option>
+        <option value="Chicken">Chicken</option>
+        <option value="Beef">Beef</option>
+        <option value="Vegetarian">Vegetarian</option>
+    </select>
+
+    <select id="sort" onchange="applyFilterSort()">
+        <option value="default">Sort</option>
+        <option value="az">A–Z</option>
+        <option value="za">Z–A</option>
+    </select>
+    </div>
+
+    <div id="results"></div>
+
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
