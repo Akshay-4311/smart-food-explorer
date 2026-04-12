@@ -4,38 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Food Explorer</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="container">
+        <h1>Smart Food Explorer</h1>
+        <p class="subtitle">Search food items and view simple recipe details.</p>
 
-    <h1>🍔 Smart Food Explorer</h1>
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search food..."
+                autocomplete="off"
+                spellcheck="false"
+            >
+            <button id="searchBtn">Search</button>
+            <button id="themeBtn" type="button">Dark mode</button>
+        </div>
 
-    <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Search food..." onkeypress="handleEnter(event)"autocomplete="off">
-        <button onclick="searchFood()">Search</button>
-        <button onclick="toggleDarkMode()">🌙</button>
+        <div class="controls">
+            <select id="filter">
+                <option value="all">All categories</option>
+                <option value="Chicken">Chicken</option>
+                <option value="Beef">Beef</option>
+                <option value="Seafood">Seafood</option>
+                <option value="Vegetarian">Vegetarian</option>
+                <option value="Dessert">Dessert</option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Pasta">Pasta</option>
+            </select>
+
+            <select id="sort">
+                <option value="default">Sort</option>
+                <option value="az">A to Z</option>
+                <option value="za">Z to A</option>
+            </select>
+        </div>
+
+        <p id="status" class="status">Search for a meal to begin.</p>
+
+        <div id="results" class="results">
+            <div class="empty">No results yet.</div>
+        </div>
+
+        <div id="details" class="details"></div>
     </div>
-    <div class="controls">
-    <select id="filter" onchange="applyFilterSort()">
-        <option value="all">All</option>
-        <option value="Chicken">Chicken</option>
-        <option value="Beef">Beef</option>
-        <option value="Vegetarian">Vegetarian</option>
-    </select>
-
-    <select id="sort" onchange="applyFilterSort()">
-        <option value="default">Sort</option>
-        <option value="az">A–Z</option>
-        <option value="za">Z–A</option>
-    </select>
-    </div>
-
-    <div id="results"></div>
-
-</div>
 
     <script src="script.js"></script>
 </body>
