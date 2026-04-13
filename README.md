@@ -24,5 +24,8 @@ Smart Food Explorer is a simple web application that allows users to search for 
 ## 📡 API Used
 https://www.themealdb.com/api.php
 
+## 🔗 Live Demo
+https://smart-food-explorer.netlify.app
+
 ## 👨‍💻 Author
 Akshay
